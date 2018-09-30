@@ -40,7 +40,7 @@ node('Server CICD') {
 
         try {
             withMaven(jdk: 'JDK 8 update 66', maven: 'Maven 3.0.5') {
-                sh "mvn -Dmaven.test.failure.ignore=true clean install -Dsetup-profile=automation"
+                sh "mvn -Dmaven.test.failure.ignore=true clean install"
             }
             if (currentBuild.result("UNSTABLE")) {
                 handleFailures()
