@@ -4,7 +4,7 @@ package com.fullgc.jbehave.steps;
  * Created by dani on 24/09/18.
  */
 
-import com.fullgc.api.RequestDispatcher;
+import com.fullgc.dispatcher.RequestDispatcher;
 import com.fullgc.jbehave.cache.CacheBean;
 import net.thucydides.junit.spring.SpringIntegration;
 import org.jbehave.core.annotations.Given;

@@ -1,4 +1,4 @@
-package com.fullgc.api
+package com.fullgc.dispatcher
 
 /**
   * Created by dani on 24/09/18.
