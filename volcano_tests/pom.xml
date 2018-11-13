@@ -27,11 +27,6 @@
             <version>9.2.3.v20140905</version>
         </dependency>
         <dependency>
-            <groupId>net.thucydides</groupId>
-            <artifactId>thucydides-core</artifactId>
-            <version>${thucydides.version}</version>
-        </dependency>
-        <dependency>
             <groupId>net.databinder.dispatch</groupId>
             <artifactId>dispatch-core_2.11</artifactId>
             <version>0.11.2</version>

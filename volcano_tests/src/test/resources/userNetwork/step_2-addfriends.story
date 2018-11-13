@@ -1,5 +1,5 @@
 Meta:
-@author Dani Shemesh
+@author Mr Project Manager
 
 Narrative:
 Dani would like to add new friends

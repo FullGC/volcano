@@ -28,21 +28,20 @@ public class GivenUserSteps {
     CacheBean cache;
 
     @Given("$user is a Volcano enthusiast")
-    public String user() {
-        return "good for you!";
+    public String user(@Named("user") String user) {
+        return "let " + user + "be a volcano enthusiast";
     }
 
     @Given("$user is logged in")
-    public void logIn(@Named("user")String user) throws IOException {
-        if (cache.getToken().get(user) == null){
-            String session = RequestDispatcher.logIn(user, cache.getUsers().get(user)).getResponseBody();
-            assert session != null;
-            cache.getToken().put(user, session);
-        }
+    public void logIn(@Named("user") String user) throws IOException {
+        String session = RequestDispatcher.logIn(user, cache.getUsers().get(user)).getResponseBody();
+        assert session != null;
+        cache.getToken().put(user, session);
+
     }
 
     @Given("$user has registered to Volcano")
-    public void quickSignup(@Named("user")String user) {
+    public void quickSignup(@Named("user") String user) {
         RequestDispatcher.createUser(user, "password");
     }
 
